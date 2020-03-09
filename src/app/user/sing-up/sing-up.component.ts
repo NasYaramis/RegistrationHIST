@@ -20,7 +20,7 @@ export class SingUpComponent implements OnInit {
   ngOnInit() {
     this.resetForm();
 
-    this.toastr.info('Indien geen wachtwoord gekozen zal er 1 aangewezen worden.', 'Opmerking!', {timeOut: 10000})    
+    this.toastr.info('If no password is chosen, 1 will be designated.', 'Remark!', {timeOut: 10000})    
   }
 
   resetForm(form?: NgForm) {
