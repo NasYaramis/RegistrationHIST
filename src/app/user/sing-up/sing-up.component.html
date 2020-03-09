@@ -1,0 +1,37 @@
+<form class="col s12 white" #userRegistrationForm="ngForm" (ngSubmit)="OnSubmit(userRegistrationForm)">
+  <div class="row">
+    <div class="input-field col s6">
+      <label data-error="Required field!">UserName</label>
+      <input class="validate" type="text" name="UserName" #UserName="ngModel" [(ngModel)]="user.UserName" required>
+    </div>
+    <div class="input-field col s6">
+        <input class="validate" type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password">
+        <label>Password</label>
+    </div>
+    <div class="input-field col s6">
+      <input class="validate" type="password" name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="user.confirmPassword">
+      <label>Confirm Password</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <label data-error="Invalid email!">Email</label>
+      <input class="validate" type="text" name="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <label>First Name</label>
+      <input type="text" name="FirstName" #FirstName="ngModel" [(ngModel)]="user.FirstName">
+    </div>
+    <div class="input-field col s6">
+      <label>Last Name</label>
+      <input type="text" name="LastName" #LastName="ngModel" [(ngModel)]="user.LastName">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <button [disabled]="!userRegistrationForm.valid" class="btn-large btn-submit" type="submit">Submit</button>
+    </div>
+  </div>
+</form>
