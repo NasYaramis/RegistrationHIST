@@ -22,7 +22,7 @@
     "bootstrap": "^4.4.1",
     "cors": "^2.8.5",
     "hibp": "^8.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "materialize-css": "^1.0.0-rc.2",
     "ng-password": "^1.1.1",
     "ngx-toastr": "^12.0.0",
